@@ -49,6 +49,25 @@ def bce(treatment_pred, current_treatments, mode, weights=None):
         raise NotImplementedError()
 
 
+def focal_loss(logits, targets, gamma=2.0, weight=None, reduction="none"):
+    """
+    Multi-class focal loss on logits.
+    logits: (N, C)
+    targets: (N,)
+    """
+    log_probs = F.log_softmax(logits, dim=-1)
+    probs = torch.exp(log_probs)
+    ce = F.nll_loss(log_probs, targets, weight=weight, reduction="none")
+    pt = probs.gather(1, targets.unsqueeze(1)).squeeze(1)
+    loss = (1.0 - pt).pow(gamma) * ce
+
+    if reduction == "mean":
+        return loss.mean()
+    if reduction == "sum":
+        return loss.sum()
+    return loss
+
+
 class BRTreatmentOutcomeHead(nn.Module):
     """Used by CRN, EDCT, MultiInputTransformer"""
 
@@ -61,6 +80,7 @@ class BRTreatmentOutcomeHead(nn.Module):
         self.fc_hidden_units = fc_hidden_units
         self.dim_treatments = dim_treatments
         self.dim_outcome = dim_outcome
+        self.has_treatments = int(dim_treatments) > 0
         self.alpha = alpha if not update_alpha else 0.0
         self.alpha_max = alpha
         self.balancing = balancing
@@ -68,17 +88,24 @@ class BRTreatmentOutcomeHead(nn.Module):
         self.linear1 = nn.Linear(self.seq_hidden_units, self.br_size)
         self.elu1 = nn.ELU()
 
-        self.linear2 = nn.Linear(self.br_size, self.fc_hidden_units)
-        self.elu2 = nn.ELU()
-        self.linear3 = nn.Linear(self.fc_hidden_units, self.dim_treatments)
+        if self.has_treatments:
+            self.linear2 = nn.Linear(self.br_size, self.fc_hidden_units)
+            self.elu2 = nn.ELU()
+            self.linear3 = nn.Linear(self.fc_hidden_units, self.dim_treatments)
+        else:
+            self.linear2 = None
+            self.elu2 = None
+            self.linear3 = None
 
         self.linear4 = nn.Linear(self.br_size + self.dim_treatments, self.fc_hidden_units)
         self.elu3 = nn.ELU()
         self.linear5 = nn.Linear(self.fc_hidden_units, self.dim_outcome)
 
-        self.treatment_head_params = ['linear2', 'linear3']
+        self.treatment_head_params = ['linear2', 'linear3'] if self.has_treatments else []
 
     def build_treatment(self, br, detached=False):
+        if not self.has_treatments:
+            return None
         if detached:
             br = br.detach()
 
@@ -90,7 +117,10 @@ class BRTreatmentOutcomeHead(nn.Module):
         return treatment
 
     def build_outcome(self, br, current_treatment):
-        x = torch.cat((br, current_treatment), dim=-1)
+        if not self.has_treatments or current_treatment is None or current_treatment.numel() == 0:
+            x = br
+        else:
+            x = torch.cat((br, current_treatment), dim=-1)
         x = self.elu3(self.linear4(x))
         outcome = self.linear5(x)
         return outcome

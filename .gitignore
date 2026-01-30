@@ -1,0 +1,58 @@
+# === Datasets / large local assets ===
+/data/
+**/*.edf
+
+# === MLflow (local experiment tracking) ===
+mlruns/
+mlartifacts/
+mlflow_exports/
+
+# === Local run outputs / checkpoints ===
+outputs/
+*.ckpt
+
+# === Public, audit-friendly results (tracked) ===
+# Do NOT ignore results_public/ globally; only exclude heavy artifacts inside it.
+results_public/**/predictions_*_window*.csv
+results_public/**/predictions_*window*.csv
+results_public/**/*.npz
+results_public/**/*.pt
+results_public/**/*.pth
+results_public/**/*.ckpt
+results_public/**/artifacts/features_cache*
+
+# === Python caches / build artifacts ===
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+*.egg-info/
+build/
+dist/
+
+# === Virtualenvs ===
+.venv/
+venv/
+
+# === Editor / OS ===
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === LaTeX Report Build Artifacts ===
+# Ignore all intermediary build files within the report directory
+/report_latex/**
+!/report_latex/
+/report_latex/**/*
+!/report_latex/english/
+!/report_latex/english/main.pdf
+!/report_latex/french/
+!/report_latex/french/main.pdf
+
+# === Node / JS Dependencies ===
+node_modules/
+report_latex/node_modules/

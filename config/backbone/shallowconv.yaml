@@ -1,0 +1,19 @@
+# @package _global_
+model:
+  name: ShallowConvNet
+  baseline:
+    _target_: src.models.baselines.ShallowConvNet
+    n_channels: null
+    n_samples: null
+    n_classes: 3
+    n_filters_time: 40
+    n_filters_spat: 40
+    kernel_time: 25
+    pool_size: 75
+    pool_stride: 15
+    dropout: 0.5
+  optimizer:
+    learning_rate: 0.001
+    weight_decay: 0.0001
+  batch_size: 128
+  max_epochs: 30

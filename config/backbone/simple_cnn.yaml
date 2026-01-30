@@ -1,0 +1,15 @@
+# @package _global_
+model:
+  name: SimpleCNN
+  baseline:
+    _target_: src.models.baselines.SimpleCNN1D
+    n_channels: null
+    n_samples: null
+    n_classes: 3
+    channels: 32
+    dropout: 0.3
+  optimizer:
+    learning_rate: 0.001
+    weight_decay: 0.0001
+  batch_size: 128
+  max_epochs: 30

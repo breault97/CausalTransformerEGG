@@ -1,0 +1,17 @@
+subject_id,y_true,y_pred,p0,p1,p2,y_true_label,y_pred_label,agg_used_subject
+2,0,0,0.63607156,0.33381873,0.030109596,mauvais,mauvais,mean_prob
+3,2,2,0.024149347,0.15628326,0.8195675,excellent,excellent,mean_prob
+5,0,0,0.96666044,0.018206924,0.015132868,mauvais,mauvais,mean_prob
+8,1,1,0.2589126,0.4925998,0.24848779,moyen,moyen,mean_prob
+14,0,0,0.80117065,0.17998302,0.01884663,mauvais,mauvais,mean_prob
+28,0,0,0.9395628,0.033434134,0.027002165,mauvais,mauvais,mean_prob
+32,0,0,0.965974,0.019114908,0.014911448,mauvais,mauvais,mean_prob
+48,0,0,0.6735386,0.29255822,0.03390317,mauvais,mauvais,mean_prob
+50,0,0,0.5431961,0.42692918,0.029874632,mauvais,mauvais,mean_prob
+60,0,0,0.94601697,0.028470492,0.025512459,mauvais,mauvais,mean_prob
+62,2,2,0.10219141,0.3976605,0.50014865,excellent,excellent,mean_prob
+66,0,0,0.96664995,0.018337734,0.015011855,mauvais,mauvais,mean_prob
+85,0,0,0.7553137,0.22942582,0.015260723,mauvais,mauvais,mean_prob
+87,0,1,0.3073011,0.5936101,0.099088624,mauvais,moyen,mean_prob
+96,2,2,0.026523469,0.17299674,0.80048,excellent,excellent,mean_prob
+107,2,2,0.025856934,0.48270252,0.49144065,excellent,excellent,mean_prob

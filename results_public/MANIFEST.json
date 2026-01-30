@@ -1,0 +1,3598 @@
+{
+  "created_at": "2026-01-30T18:11:54.317822+00:00",
+  "source": "mlflow_exports/experiment_665075068361836799_CT_eegmmidb",
+  "destination": "results_public",
+  "max_file_mb": 20.0,
+  "include_large": false,
+  "experiment_files": [
+    {
+      "path": "results_public/CT_eegmmidb/runs_summary.csv",
+      "bytes": 21494
+    }
+  ],
+  "experiment_skipped": [],
+  "runs": [
+    {
+      "run_id": "1ebc9c06368b41c9831524d285701843",
+      "run_name": "dazzling-pig-862",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confidence_hist_test_record.png",
+          "bytes": 38332
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confidence_hist_test_subject.png",
+          "bytes": 35469
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confidence_hist_val_record.png",
+          "bytes": 37712
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confidence_hist_val_subject.png",
+          "bytes": 40408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_test_record.png",
+          "bytes": 67450
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_test_record_norm.png",
+          "bytes": 77510
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_test_subject.png",
+          "bytes": 62515
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_test_subject_norm.png",
+          "bytes": 78487
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_val_record.png",
+          "bytes": 70262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_val_record_norm.png",
+          "bytes": 83332
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_val_subject.png",
+          "bytes": 60421
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_val_subject_norm.png",
+          "bytes": 78946
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/metrics.json",
+          "bytes": 2275
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/params.json",
+          "bytes": 5517
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/predictions_test_record.csv",
+          "bytes": 43904
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/predictions_val_record.csv",
+          "bytes": 29494
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/quality_report_test.json",
+          "bytes": 7210
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/quality_report_test.md",
+          "bytes": 1102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/quality_report_val.json",
+          "bytes": 6249
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/quality_report_val.md",
+          "bytes": 688
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67450
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62515
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 70262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60421
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 43904
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1529
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29494
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1051
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 38332
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35469
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37712
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 40408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 77510
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 78487
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 83332
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 78946
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/quality_report_test.json",
+          "bytes": 7210
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/quality_report_test.md",
+          "bytes": 1102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/quality_report_val.json",
+          "bytes": 6249
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/quality_report_val.md",
+          "bytes": 688
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1653244
+    },
+    {
+      "run_id": "16521b4c34b140e9aade8717f099261d",
+      "run_name": "bold-fawn-723",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confidence_hist_test_record.png",
+          "bytes": 41182
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confidence_hist_test_subject.png",
+          "bytes": 37150
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confidence_hist_val_record.png",
+          "bytes": 37745
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confidence_hist_val_subject.png",
+          "bytes": 43418
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_test_record.png",
+          "bytes": 68393
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_test_record_norm.png",
+          "bytes": 83769
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_test_subject.png",
+          "bytes": 61270
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_test_subject_norm.png",
+          "bytes": 74682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_val_record.png",
+          "bytes": 65899
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_val_record_norm.png",
+          "bytes": 78389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_val_subject.png",
+          "bytes": 61851
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_val_subject_norm.png",
+          "bytes": 74807
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/metrics.json",
+          "bytes": 2277
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/params.json",
+          "bytes": 5517
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/predictions_test_record.csv",
+          "bytes": 43576
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/predictions_val_record.csv",
+          "bytes": 29262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/quality_report_test.json",
+          "bytes": 7294
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/quality_report_test.md",
+          "bytes": 1102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/quality_report_val.json",
+          "bytes": 6233
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/quality_report_val.md",
+          "bytes": 704
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 68393
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 61270
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 65899
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 61851
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 43576
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1522
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1045
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 41182
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 37150
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37745
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43418
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 83769
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 78389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74807
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/quality_report_test.json",
+          "bytes": 7294
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/quality_report_test.md",
+          "bytes": 1102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/quality_report_val.json",
+          "bytes": 6233
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/quality_report_val.md",
+          "bytes": 704
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1647703
+    },
+    {
+      "run_id": "a8f5bd3a58a94786bf71d821026eacf4",
+      "run_name": "masked-foal-764",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confidence_hist_test_record.png",
+          "bytes": 41301
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confidence_hist_test_subject.png",
+          "bytes": 35431
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confidence_hist_val_record.png",
+          "bytes": 37732
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confidence_hist_val_subject.png",
+          "bytes": 43246
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_test_record.png",
+          "bytes": 67393
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_test_record_norm.png",
+          "bytes": 83715
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_test_subject.png",
+          "bytes": 62452
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_test_subject_norm.png",
+          "bytes": 76572
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_val_record.png",
+          "bytes": 70526
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_val_record_norm.png",
+          "bytes": 81833
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_val_subject.png",
+          "bytes": 62079
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_val_subject_norm.png",
+          "bytes": 74615
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/metrics.json",
+          "bytes": 2230
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/params.json",
+          "bytes": 5517
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/predictions_test_record.csv",
+          "bytes": 44086
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/predictions_val_record.csv",
+          "bytes": 29465
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/quality_report_test.json",
+          "bytes": 7238
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/quality_report_test.md",
+          "bytes": 1099
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/quality_report_val.json",
+          "bytes": 6242
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/quality_report_val.md",
+          "bytes": 688
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67393
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62452
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 70526
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 62079
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 44086
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1539
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29465
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1055
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 41301
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35431
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37732
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43246
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 83715
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76572
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 81833
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74615
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/quality_report_test.json",
+          "bytes": 7238
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/quality_report_test.md",
+          "bytes": 1099
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/quality_report_val.json",
+          "bytes": 6242
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/quality_report_val.md",
+          "bytes": 688
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1665657
+    },
+    {
+      "run_id": "b7f7e83ab61940f1b99e9213d6c3dc6e",
+      "run_name": "fearless-shad-563",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confidence_hist_test_record.png",
+          "bytes": 37371
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confidence_hist_test_subject.png",
+          "bytes": 35403
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confidence_hist_val_record.png",
+          "bytes": 37777
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confidence_hist_val_subject.png",
+          "bytes": 43209
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_test_record.png",
+          "bytes": 71111
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_test_record_norm.png",
+          "bytes": 77398
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_test_subject.png",
+          "bytes": 62306
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_test_subject_norm.png",
+          "bytes": 76727
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_val_record.png",
+          "bytes": 64741
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_val_record_norm.png",
+          "bytes": 83018
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_val_subject.png",
+          "bytes": 60552
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/confusion_matrix_val_subject_norm.png",
+          "bytes": 79386
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/metrics.json",
+          "bytes": 2278
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/params.json",
+          "bytes": 5517
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/predictions_test_record.csv",
+          "bytes": 44455
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/predictions_val_record.csv",
+          "bytes": 29571
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/quality_report_test.json",
+          "bytes": 7267
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/quality_report_test.md",
+          "bytes": 1106
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/quality_report_val.json",
+          "bytes": 6308
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/quality_report_val.md",
+          "bytes": 705
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 71111
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62306
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 64741
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60552
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 44455
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1564
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29571
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1058
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 37371
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35403
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37777
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43209
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 77398
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76727
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 83018
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 79386
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/quality_report_test.json",
+          "bytes": 7267
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/quality_report_test.md",
+          "bytes": 1106
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/quality_report_val.json",
+          "bytes": 6308
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b7f7e83ab61940f1b99e9213d6c3dc6e_fearless-shad-563/artifacts/reports/quality_report_val.md",
+          "bytes": 705
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1651129
+    },
+    {
+      "run_id": "d5599a491aed4c30beb8dd6981b410d9",
+      "run_name": "dapper-hound-665",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confidence_hist_test_record.png",
+          "bytes": 39972
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confidence_hist_test_subject.png",
+          "bytes": 35548
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confidence_hist_val_record.png",
+          "bytes": 36963
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confidence_hist_val_subject.png",
+          "bytes": 34482
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_test_record.png",
+          "bytes": 68526
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_test_record_norm.png",
+          "bytes": 83354
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_test_subject.png",
+          "bytes": 61549
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_test_subject_norm.png",
+          "bytes": 78418
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_val_record.png",
+          "bytes": 66997
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_val_record_norm.png",
+          "bytes": 77302
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_val_subject.png",
+          "bytes": 60474
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_val_subject_norm.png",
+          "bytes": 76486
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/metrics.json",
+          "bytes": 2271
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/params.json",
+          "bytes": 5517
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/predictions_test_record.csv",
+          "bytes": 41684
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/predictions_val_record.csv",
+          "bytes": 32372
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/quality_report_test.json",
+          "bytes": 7279
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/quality_report_test.md",
+          "bytes": 1105
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/quality_report_val.json",
+          "bytes": 6214
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/quality_report_val.md",
+          "bytes": 693
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 68526
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 61549
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 66997
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60474
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 41684
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1466
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 32372
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1159
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 39972
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35548
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 36963
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 34482
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 83354
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 78418
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 77302
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 76486
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/quality_report_test.json",
+          "bytes": 7279
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/quality_report_test.md",
+          "bytes": 1105
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/quality_report_val.json",
+          "bytes": 6214
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/quality_report_val.md",
+          "bytes": 693
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1633139
+    },
+    {
+      "run_id": "54c985de34014f7daff3ab6378c61cb4",
+      "run_name": "likeable-owl-318",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confidence_hist_test_record.png",
+          "bytes": 37259
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confidence_hist_test_subject.png",
+          "bytes": 35378
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confidence_hist_val_record.png",
+          "bytes": 37810
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confidence_hist_val_subject.png",
+          "bytes": 43114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_test_record.png",
+          "bytes": 68219
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_test_record_norm.png",
+          "bytes": 78369
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_test_subject.png",
+          "bytes": 62480
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_test_subject_norm.png",
+          "bytes": 78485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_val_record.png",
+          "bytes": 71421
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_val_record_norm.png",
+          "bytes": 78163
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_val_subject.png",
+          "bytes": 60423
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/confusion_matrix_val_subject_norm.png",
+          "bytes": 78490
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/metrics.json",
+          "bytes": 2273
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/params.json",
+          "bytes": 5657
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/predictions_test_record.csv",
+          "bytes": 43828
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/predictions_val_record.csv",
+          "bytes": 29410
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/quality_report_test.json",
+          "bytes": 7247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/quality_report_val.json",
+          "bytes": 6282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/quality_report_val.md",
+          "bytes": 705
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 68219
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62480
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 71421
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60423
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 43828
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1527
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29410
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1049
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 37259
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35378
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37810
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 78369
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 78485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 78163
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 78490
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/quality_report_test.json",
+          "bytes": 7247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/quality_report_val.json",
+          "bytes": 6282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_54c985de34014f7daff3ab6378c61cb4_likeable-owl-318/artifacts/reports/quality_report_val.md",
+          "bytes": 705
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1650768
+    },
+    {
+      "run_id": "b6694b46fa7345aa8157f6be47ae14aa",
+      "run_name": "unleashed-bee-731",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confidence_hist_test_record.png",
+          "bytes": 43040
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confidence_hist_test_subject.png",
+          "bytes": 34321
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confidence_hist_val_record.png",
+          "bytes": 37626
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confidence_hist_val_subject.png",
+          "bytes": 43212
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_test_record.png",
+          "bytes": 69550
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_test_record_norm.png",
+          "bytes": 84155
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_test_subject.png",
+          "bytes": 63028
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_test_subject_norm.png",
+          "bytes": 76362
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_val_record.png",
+          "bytes": 65267
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_val_record_norm.png",
+          "bytes": 78783
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_val_subject.png",
+          "bytes": 61851
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_val_subject_norm.png",
+          "bytes": 74807
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/metrics.json",
+          "bytes": 2269
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/params.json",
+          "bytes": 5657
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/predictions_test_record.csv",
+          "bytes": 43312
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/predictions_val_record.csv",
+          "bytes": 29165
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/quality_report_test.json",
+          "bytes": 7255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/quality_report_test.md",
+          "bytes": 1107
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/quality_report_val.json",
+          "bytes": 6247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/quality_report_val.md",
+          "bytes": 705
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 69550
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 63028
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 65267
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 61851
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 43312
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1532
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29165
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1044
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 43040
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 34321
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37626
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43212
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 84155
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76362
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 78783
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74807
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/quality_report_test.json",
+          "bytes": 7255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/quality_report_test.md",
+          "bytes": 1107
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/quality_report_val.json",
+          "bytes": 6247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/quality_report_val.md",
+          "bytes": 705
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1653978
+    },
+    {
+      "run_id": "7da77fac36064dc0bbba4bd40640d70f",
+      "run_name": "exultant-bird-298",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confidence_hist_test_record.png",
+          "bytes": 41345
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confidence_hist_test_subject.png",
+          "bytes": 36078
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confidence_hist_val_record.png",
+          "bytes": 37696
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confidence_hist_val_subject.png",
+          "bytes": 43305
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_test_record.png",
+          "bytes": 66578
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_test_record_norm.png",
+          "bytes": 78074
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_test_subject.png",
+          "bytes": 62103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_test_subject_norm.png",
+          "bytes": 76282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_val_record.png",
+          "bytes": 71447
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_val_record_norm.png",
+          "bytes": 78649
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_val_subject.png",
+          "bytes": 62079
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/confusion_matrix_val_subject_norm.png",
+          "bytes": 74615
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/metrics.json",
+          "bytes": 2243
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/params.json",
+          "bytes": 5657
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/predictions_test_record.csv",
+          "bytes": 44114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/predictions_val_record.csv",
+          "bytes": 29438
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/quality_report_test.json",
+          "bytes": 7247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/quality_report_val.json",
+          "bytes": 6215
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/quality_report_val.md",
+          "bytes": 686
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 66578
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 71447
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 62079
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 44114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1555
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29438
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1053
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 41345
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 36078
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37696
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43305
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 78074
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 78649
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74615
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/quality_report_test.json",
+          "bytes": 7247
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/quality_report_val.json",
+          "bytes": 6215
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_7da77fac36064dc0bbba4bd40640d70f_exultant-bird-298/artifacts/reports/quality_report_val.md",
+          "bytes": 686
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1648506
+    },
+    {
+      "run_id": "a974048a273242279bee17753f4de6e4",
+      "run_name": "fun-roo-177",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confidence_hist_test_record.png",
+          "bytes": 42951
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confidence_hist_test_subject.png",
+          "bytes": 35408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confidence_hist_val_record.png",
+          "bytes": 36216
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confidence_hist_val_subject.png",
+          "bytes": 43167
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_test_record.png",
+          "bytes": 68984
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_test_record_norm.png",
+          "bytes": 77762
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_test_subject.png",
+          "bytes": 61144
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_test_subject_norm.png",
+          "bytes": 76378
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_val_record.png",
+          "bytes": 69623
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_val_record_norm.png",
+          "bytes": 78730
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_val_subject.png",
+          "bytes": 59388
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/confusion_matrix_val_subject_norm.png",
+          "bytes": 76584
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/metrics.json",
+          "bytes": 2273
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/params.json",
+          "bytes": 5657
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/predictions_test_record.csv",
+          "bytes": 44383
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/predictions_val_record.csv",
+          "bytes": 29419
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/quality_report_test.json",
+          "bytes": 7262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/quality_report_val.json",
+          "bytes": 6273
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/quality_report_val.md",
+          "bytes": 701
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 68984
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 61144
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 69623
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 59388
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 44383
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1557
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29419
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1055
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 42951
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 36216
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43167
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 77762
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76378
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 78730
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 76584
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/quality_report_test.json",
+          "bytes": 7262
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/quality_report_test.md",
+          "bytes": 1103
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/quality_report_val.json",
+          "bytes": 6273
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_a974048a273242279bee17753f4de6e4_fun-roo-177/artifacts/reports/quality_report_val.md",
+          "bytes": 701
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1645384
+    },
+    {
+      "run_id": "07df9328143b46e8b00e8e3357fbc216",
+      "run_name": "nebulous-wren-944",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confidence_hist_test_record.png",
+          "bytes": 41303
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confidence_hist_test_subject.png",
+          "bytes": 34367
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confidence_hist_val_record.png",
+          "bytes": 37965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confidence_hist_val_subject.png",
+          "bytes": 34410
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_test_record.png",
+          "bytes": 67863
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_test_record_norm.png",
+          "bytes": 77560
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_test_subject.png",
+          "bytes": 60783
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_test_subject_norm.png",
+          "bytes": 75358
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_val_record.png",
+          "bytes": 67402
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_val_record_norm.png",
+          "bytes": 77647
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_val_subject.png",
+          "bytes": 60474
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/confusion_matrix_val_subject_norm.png",
+          "bytes": 76486
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/metrics.json",
+          "bytes": 2269
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/params.json",
+          "bytes": 5657
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/predictions_test_record.csv",
+          "bytes": 42072
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/predictions_val_record.csv",
+          "bytes": 32617
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/quality_report_test.json",
+          "bytes": 7282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/quality_report_test.md",
+          "bytes": 1108
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/quality_report_val.json",
+          "bytes": 6209
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/quality_report_val.md",
+          "bytes": 692
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67863
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 60783
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 67402
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60474
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 42072
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1474
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 32617
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1162
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 41303
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 34367
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 34410
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 77560
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 75358
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 77647
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 76486
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/quality_report_test.json",
+          "bytes": 7282
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/quality_report_test.md",
+          "bytes": 1108
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/quality_report_val.json",
+          "bytes": 6209
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_07df9328143b46e8b00e8e3357fbc216_nebulous-wren-944/artifacts/reports/quality_report_val.md",
+          "bytes": 692
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1617648
+    },
+    {
+      "run_id": "691ce7bfc9c4433997d5d6c41de619ca",
+      "run_name": "suave-mole-952",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_test_record.png",
+          "bytes": 67255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_test_subject.png",
+          "bytes": 60704
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_val_record.png",
+          "bytes": 64319
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_val_subject.png",
+          "bytes": 61485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/metrics.json",
+          "bytes": 2042
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/params.json",
+          "bytes": 5614
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/predictions_test_record.csv",
+          "bytes": 40875
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/predictions_val_record.csv",
+          "bytes": 27880
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/quality_report_test.json",
+          "bytes": 6856
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/quality_report_test.md",
+          "bytes": 1106
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/quality_report_val.json",
+          "bytes": 5887
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/quality_report_val.md",
+          "bytes": 703
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 60704
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 64319
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 61485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 40875
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1479
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 27880
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1029
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/quality_report_test.json",
+          "bytes": 6856
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/quality_report_test.md",
+          "bytes": 1106
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/quality_report_val.json",
+          "bytes": 5887
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_691ce7bfc9c4433997d5d6c41de619ca_suave-mole-952/artifacts/reports/quality_report_val.md",
+          "bytes": 703
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1593738
+    },
+    {
+      "run_id": "ae0afe452b39453b940fb4817719e3c1",
+      "run_name": "fun-tern-199",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_test_record.png",
+          "bytes": 68256
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_test_subject.png",
+          "bytes": 61126
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_val_record.png",
+          "bytes": 65760
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_val_subject.png",
+          "bytes": 62199
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/metrics.json",
+          "bytes": 2021
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/params.json",
+          "bytes": 5614
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/predictions_test_record.csv",
+          "bytes": 40909
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/predictions_val_record.csv",
+          "bytes": 27875
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/quality_report_test.json",
+          "bytes": 6858
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/quality_report_test.md",
+          "bytes": 1107
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/quality_report_val.json",
+          "bytes": 5862
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/quality_report_val.md",
+          "bytes": 689
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 68256
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 61126
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 65760
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 62199
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 40909
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1483
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 27875
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1029
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/quality_report_test.json",
+          "bytes": 6858
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/quality_report_test.md",
+          "bytes": 1107
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/quality_report_val.json",
+          "bytes": 5862
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_ae0afe452b39453b940fb4817719e3c1_fun-tern-199/artifacts/reports/quality_report_val.md",
+          "bytes": 689
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1600863
+    },
+    {
+      "run_id": "2bd040d284fb4a0082e1f4abac9191f1",
+      "run_name": "enchanting-fowl-386",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_test_record.png",
+          "bytes": 64640
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_test_subject.png",
+          "bytes": 62211
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_val_record.png",
+          "bytes": 65120
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_val_subject.png",
+          "bytes": 61733
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/metrics.json",
+          "bytes": 2042
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/params.json",
+          "bytes": 5614
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/predictions_test_record.csv",
+          "bytes": 41040
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/predictions_val_record.csv",
+          "bytes": 27889
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/quality_report_test.json",
+          "bytes": 6861
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/quality_report_test.md",
+          "bytes": 1111
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/quality_report_val.json",
+          "bytes": 5898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/quality_report_val.md",
+          "bytes": 710
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 64640
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62211
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 65120
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 61733
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 41040
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1484
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 27889
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1030
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/quality_report_test.json",
+          "bytes": 6861
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/quality_report_test.md",
+          "bytes": 1111
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/quality_report_val.json",
+          "bytes": 5898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_2bd040d284fb4a0082e1f4abac9191f1_enchanting-fowl-386/artifacts/reports/quality_report_val.md",
+          "bytes": 710
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1594030
+    },
+    {
+      "run_id": "c6c94f0dd96446c197ac89efcd274ede",
+      "run_name": "brawny-wolf-229",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_test_record.png",
+          "bytes": 67822
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_test_subject.png",
+          "bytes": 61989
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_val_record.png",
+          "bytes": 62995
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_val_subject.png",
+          "bytes": 62102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/metrics.json",
+          "bytes": 2045
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/params.json",
+          "bytes": 5614
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/predictions_test_record.csv",
+          "bytes": 41014
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/predictions_val_record.csv",
+          "bytes": 27888
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/quality_report_test.json",
+          "bytes": 6866
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/quality_report_test.md",
+          "bytes": 1115
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/quality_report_val.json",
+          "bytes": 5898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/quality_report_val.md",
+          "bytes": 710
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67822
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 61989
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 62995
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 62102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 41014
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1492
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 27888
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1028
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/quality_report_test.json",
+          "bytes": 6866
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/quality_report_test.md",
+          "bytes": 1115
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/quality_report_val.json",
+          "bytes": 5898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_c6c94f0dd96446c197ac89efcd274ede_brawny-wolf-229/artifacts/reports/quality_report_val.md",
+          "bytes": 710
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1596411
+    },
+    {
+      "run_id": "9cea104ff9ea4d8d8cc59e3aca60da14",
+      "run_name": "legendary-shoat-329",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confidence_hist_test_record.png",
+          "bytes": 40601
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confidence_hist_test_subject.png",
+          "bytes": 44607
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confidence_hist_val_record.png",
+          "bytes": 36266
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confidence_hist_val_subject.png",
+          "bytes": 38125
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_test_record.png",
+          "bytes": 67297
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_test_subject.png",
+          "bytes": 62248
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_val_record.png",
+          "bytes": 67313
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_val_subject.png",
+          "bytes": 59281
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/metrics.json",
+          "bytes": 2033
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/params.json",
+          "bytes": 5614
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/predictions_test_record.csv",
+          "bytes": 39066
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/predictions_val_record.csv",
+          "bytes": 29848
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/quality_report_test.json",
+          "bytes": 6861
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/quality_report_test.md",
+          "bytes": 1114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/quality_report_val.json",
+          "bytes": 5879
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/quality_report_val.md",
+          "bytes": 700
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67297
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62248
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 67313
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 59281
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 39066
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1420
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29848
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40601
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 44607
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 36266
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 38125
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/quality_report_test.json",
+          "bytes": 6861
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/quality_report_test.md",
+          "bytes": 1114
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/quality_report_val.json",
+          "bytes": 5879
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_9cea104ff9ea4d8d8cc59e3aca60da14_legendary-shoat-329/artifacts/reports/quality_report_val.md",
+          "bytes": 700
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1608459
+    },
+    {
+      "run_id": "d45bb37fff884229a592a4c177ed677c",
+      "run_name": "spiffy-goat-177",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confidence_hist_test_record.png",
+          "bytes": 42999
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confidence_hist_test_subject.png",
+          "bytes": 35408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confidence_hist_val_record.png",
+          "bytes": 37872
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confidence_hist_val_subject.png",
+          "bytes": 43256
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_test_record.png",
+          "bytes": 64816
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_test_record_norm.png",
+          "bytes": 80096
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_test_subject.png",
+          "bytes": 62003
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_test_subject_norm.png",
+          "bytes": 76403
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_val_record.png",
+          "bytes": 68939
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_val_record_norm.png",
+          "bytes": 83102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_val_subject.png",
+          "bytes": 60524
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/confusion_matrix_val_subject_norm.png",
+          "bytes": 74270
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/metrics.json",
+          "bytes": 2243
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/params.json",
+          "bytes": 5653
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/predictions_test_record.csv",
+          "bytes": 43778
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/predictions_val_record.csv",
+          "bytes": 29400
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/quality_report_test.json",
+          "bytes": 7274
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/quality_report_test.md",
+          "bytes": 1104
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/quality_report_val.json",
+          "bytes": 6331
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/quality_report_val.md",
+          "bytes": 703
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 64816
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 62003
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 68939
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 60524
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 43778
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1538
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 29400
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1048
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 42999
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35408
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 37872
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 43256
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 80096
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 76403
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 83102
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74270
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/quality_report_test.json",
+          "bytes": 7274
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/quality_report_test.md",
+          "bytes": 1104
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/quality_report_val.json",
+          "bytes": 6331
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_d45bb37fff884229a592a4c177ed677c_spiffy-goat-177/artifacts/reports/quality_report_val.md",
+          "bytes": 703
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1650928
+    },
+    {
+      "run_id": "47eda505a4ce4363a01c2d14987df66c",
+      "run_name": "grandiose-carp-541",
+      "files": [
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_test_record.png",
+          "bytes": 67255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_test_subject.png",
+          "bytes": 60704
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_val_record.png",
+          "bytes": 64319
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_val_subject.png",
+          "bytes": 61485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/metrics.json",
+          "bytes": 2042
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/params.json",
+          "bytes": 5673
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/predictions_test_record.csv",
+          "bytes": 40898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/predictions_val_record.csv",
+          "bytes": 27882
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/quality_report_test.json",
+          "bytes": 6858
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/quality_report_test.md",
+          "bytes": 1108
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/quality_report_val.json",
+          "bytes": 5889
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/quality_report_val.md",
+          "bytes": 705
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/confusion_matrices/confusion_matrix_test_record.png",
+          "bytes": 67255
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/confusion_matrices/confusion_matrix_test_subject.png",
+          "bytes": 60704
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/confusion_matrices/confusion_matrix_val_record.png",
+          "bytes": 64319
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/confusion_matrices/confusion_matrix_val_subject.png",
+          "bytes": 61485
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_test.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_test_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_test_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_val.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_val_record.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/classification_report_val_subject.txt",
+          "bytes": 389
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/predictions_test_record.csv",
+          "bytes": 40898
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/predictions_test_subject.csv",
+          "bytes": 1476
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/predictions_val_record.csv",
+          "bytes": 27882
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/predictions/predictions_val_subject.csv",
+          "bytes": 1024
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confidence_hist_test_record.png",
+          "bytes": 40682
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confidence_hist_test_subject.png",
+          "bytes": 35121
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confidence_hist_val_record.png",
+          "bytes": 41991
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confidence_hist_val_subject.png",
+          "bytes": 36990
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confusion_matrix_test_record_norm.png",
+          "bytes": 74254
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confusion_matrix_test_subject_norm.png",
+          "bytes": 74845
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confusion_matrix_val_record_norm.png",
+          "bytes": 73924
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/confusion_matrix_val_subject_norm.png",
+          "bytes": 74965
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/quality_report_test.json",
+          "bytes": 6858
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/quality_report_test.md",
+          "bytes": 1108
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/quality_report_val.json",
+          "bytes": 5889
+        },
+        {
+          "path": "results_public/CT_eegmmidb/run_47eda505a4ce4363a01c2d14987df66c_grandiose-carp-541/artifacts/reports/quality_report_val.md",
+          "bytes": 705
+        }
+      ],
+      "skipped": [],
+      "total_bytes": 1593855
+    }
+  ],
+  "summary": {
+    "total_files": 851,
+    "total_bytes": 27726934,
+    "top_files": [
+      {
+        "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/confusion_matrix_test_record_norm.png",
+        "bytes": 84155
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_b6694b46fa7345aa8157f6be47ae14aa_unleashed-bee-731/artifacts/reports/confusion_matrix_test_record_norm.png",
+        "bytes": 84155
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/confusion_matrix_test_record_norm.png",
+        "bytes": 83769
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_16521b4c34b140e9aade8717f099261d_bold-fawn-723/artifacts/reports/confusion_matrix_test_record_norm.png",
+        "bytes": 83769
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/confusion_matrix_test_record_norm.png",
+        "bytes": 83715
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_a8f5bd3a58a94786bf71d821026eacf4_masked-foal-764/artifacts/reports/confusion_matrix_test_record_norm.png",
+        "bytes": 83715
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/confusion_matrix_test_record_norm.png",
+        "bytes": 83354
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_d5599a491aed4c30beb8dd6981b410d9_dapper-hound-665/artifacts/reports/confusion_matrix_test_record_norm.png",
+        "bytes": 83354
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/confusion_matrix_val_record_norm.png",
+        "bytes": 83332
+      },
+      {
+        "path": "results_public/CT_eegmmidb/run_1ebc9c06368b41c9831524d285701843_dazzling-pig-862/artifacts/reports/confusion_matrix_val_record_norm.png",
+        "bytes": 83332
+      }
+    ]
+  }
+}

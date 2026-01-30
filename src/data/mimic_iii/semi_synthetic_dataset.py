@@ -7,7 +7,13 @@ import multiprocessing
 from tqdm import tqdm
 from typing import List
 from sklearn.model_selection import train_test_split
+import os
+import sys
+import matplotlib
+if "matplotlib.pyplot" not in sys.modules:
+    matplotlib.use("Agg", force=True)
 import matplotlib.pyplot as plt
+plt.ioff()
 import itertools
 from hydra.utils import instantiate
 from copy import deepcopy
@@ -256,7 +262,7 @@ class MIMIC3SyntheticDataset(MIMIC3RealDataset):
         elif mode == 'counterfactual_treatment_seq' or mode == 'counterfactual_one_step':
             self.treatments_seq = treatments_seq
             if mode == 'counterfactual_one_step':
-                treatment_options = [0.0, 1.0]  # TODO not only binary treatments
+                treatment_options = [0.0, 1.0]  # currently binary treatments
                 self.treatments_seq = np.array([x for x in itertools.product(*([treatment_options] * len(prev_treatment_cols)))])
                 self.treatments_seq = self.treatments_seq[:, None, :]
                 self.cf_start = 0
@@ -325,55 +331,79 @@ class MIMIC3SyntheticDataset(MIMIC3RealDataset):
 
         self.norm_const = 1.0
 
-    def plot_timeseries(self, n_patients=5, mode='factual'):
+    def plot_timeseries(self, n_patients=5, mode='factual', output_dir=None):
         """
         Plotting patient trajectories
         Args:
             n_patients: Number of trajectories
             mode: factual / counterfactual
+            output_dir: Directory for saving plot
         """
-        fig, ax = plt.subplots(nrows=4 * len(self.synthetic_outcomes) + len(self.synthetic_treatments), ncols=1, figsize=(15, 30))
-        for i, patient_ix in enumerate(self.all_vitals.index.levels[0][:n_patients]):
-            ax_ind = 0
-            factuals = self.all_vitals.fillna(0.0).fact.astype(bool)
-            for outcome in self.synthetic_outcomes:
-                outcome_name = outcome.outcome_name
-                ax[ax_ind].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_exog'].
-                                groupby('hours_in').head(1).values)
-                ax[ax_ind + 1].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_endo'].
+        try:
+            from torch.utils.data import get_worker_info
+        except Exception:
+            get_worker_info = None
+        if get_worker_info is not None and get_worker_info() is not None:
+            logger.warning("Skipping plot_timeseries inside DataLoader worker.")
+            return
+        if int(os.environ.get("RANK", "0")) != 0 or int(os.environ.get("LOCAL_RANK", "0")) != 0:
+            logger.debug("Skipping plot_timeseries on non-zero rank.")
+            return
+
+        if output_dir is None:
+            output_dir = os.getcwd()
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, f"{self.subset_name}_timeseries_{mode}.png")
+
+        fig, ax = plt.subplots(
+            nrows=4 * len(self.synthetic_outcomes) + len(self.synthetic_treatments),
+            ncols=1,
+            figsize=(15, 30),
+        )
+        try:
+            for i, patient_ix in enumerate(self.all_vitals.index.levels[0][:n_patients]):
+                ax_ind = 0
+                factuals = self.all_vitals.fillna(0.0).fact.astype(bool)
+                for outcome in self.synthetic_outcomes:
+                    outcome_name = outcome.outcome_name
+                    ax[ax_ind].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_exog'].
                                     groupby('hours_in').head(1).values)
-                ax[ax_ind + 2].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_untreated'].
-                                    groupby('hours_in').head(1).values)
-                if mode == 'factual':
-                    ax[ax_ind + 3].plot(self.all_vitals.loc[patient_ix, outcome_name].values)
-                elif mode == 'counterfactual':
-                    color = next(ax[ax_ind + 3]._get_lines.prop_cycler)['color']
-                    ax[ax_ind + 3].plot(self.all_vitals[factuals].loc[patient_ix, outcome_name].
-                                        groupby('hours_in').head(1).index.get_level_values(1),
-                                        self.all_vitals[factuals].loc[patient_ix, outcome_name].
-                                        groupby('hours_in').head(1).values, color=color)
-                    ax[ax_ind + 3].scatter(self.all_vitals.loc[patient_ix, outcome_name].index.get_level_values(1),
-                                           self.all_vitals.loc[patient_ix, outcome_name].values, color=color, s=2)
-                    # for traj_ix in self.all_vitals.loc[patient_ix].index.get_level_values(0):
-                    #     ax[ax_ind + 3].plot(self.all_vitals.loc[(patient_ix, traj_ix), outcome_name].index,
-                    #                         self.all_vitals.loc[(patient_ix, traj_ix), outcome_name].values, color=color,
-                    #                         linewidth=0.05)
+                    ax[ax_ind + 1].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_endo'].
+                                        groupby('hours_in').head(1).values)
+                    ax[ax_ind + 2].plot(self.all_vitals[factuals].loc[patient_ix, f'{outcome_name}_untreated'].
+                                        groupby('hours_in').head(1).values)
+                    if mode == 'factual':
+                        ax[ax_ind + 3].plot(self.all_vitals.loc[patient_ix, outcome_name].values)
+                    elif mode == 'counterfactual':
+                        color = next(ax[ax_ind + 3]._get_lines.prop_cycler)['color']
+                        ax[ax_ind + 3].plot(self.all_vitals[factuals].loc[patient_ix, outcome_name].
+                                            groupby('hours_in').head(1).index.get_level_values(1),
+                                            self.all_vitals[factuals].loc[patient_ix, outcome_name].
+                                            groupby('hours_in').head(1).values, color=color)
+                        ax[ax_ind + 3].scatter(self.all_vitals.loc[patient_ix, outcome_name].index.get_level_values(1),
+                                               self.all_vitals.loc[patient_ix, outcome_name].values, color=color, s=2)
+                        # for traj_ix in self.all_vitals.loc[patient_ix].index.get_level_values(0):
+                        #     ax[ax_ind + 3].plot(self.all_vitals.loc[(patient_ix, traj_ix), outcome_name].index,
+                        #                         self.all_vitals.loc[(patient_ix, traj_ix), outcome_name].values, color=color,
+                        #                         linewidth=0.05)
 
-                ax[ax_ind].set_title(f'{outcome_name}_exog')
-                ax[ax_ind + 1].set_title(f'{outcome_name}_endo')
-                ax[ax_ind + 2].set_title(f'{outcome_name}_untreated')
-                ax[ax_ind + 3].set_title(f'{outcome_name}')
-                ax_ind += 4
+                    ax[ax_ind].set_title(f'{outcome_name}_exog')
+                    ax[ax_ind + 1].set_title(f'{outcome_name}_endo')
+                    ax[ax_ind + 2].set_title(f'{outcome_name}_untreated')
+                    ax[ax_ind + 3].set_title(f'{outcome_name}')
+                    ax_ind += 4
 
-            for treatment in self.synthetic_treatments:
-                treatment_name = treatment.treatment_name
-                ax[ax_ind].plot(self.all_vitals[factuals].loc[patient_ix, f'{treatment_name}_prev'].
-                                groupby('hours_in').head(1).values + 2 * i)
-                ax[ax_ind].set_title(f'{treatment_name}')
-                ax_ind += 1
+                for treatment in self.synthetic_treatments:
+                    treatment_name = treatment.treatment_name
+                    ax[ax_ind].plot(self.all_vitals[factuals].loc[patient_ix, f'{treatment_name}_prev'].
+                                    groupby('hours_in').head(1).values + 2 * i)
+                    ax[ax_ind].set_title(f'{treatment_name}')
+                    ax_ind += 1
 
-        fig.suptitle(f'Time series from {self.subset_name}', fontsize=16)
-        plt.show()
+            fig.suptitle(f'Time series from {self.subset_name}', fontsize=16)
+            fig.savefig(output_path, dpi=200, bbox_inches="tight")
+        finally:
+            plt.close(fig)
 
     def _sample_treatments_from_factuals(self, patient_df, t, rng=np.random.RandomState(None)):
         """

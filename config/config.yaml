@@ -4,17 +4,27 @@ model:
   dim_vitals: ???                   # Will be defined with +dataset=...
   dim_static_features: ???          # Will be defined with +dataset=...
   dim_outcomes: ???                 # Will be defined with +dataset=...
+  dim_outcomes_input: ???           # Will be defined with +dataset=...
 
 # Dataset for training / evaluation -- specific values should be filled for each dataset
 dataset:
   val_batch_size: ???               # Will be defined with +dataset=...
   treatment_mode: ???               # multiclass / multilabel; Will be defined with +dataset=...
+  num_workers: 0                    # DataLoader workers
 
 # Experiment specific parameters
 exp:
   seed: 100                         # Random seed for all the initialisations, dataset generation etc.
   gpus: [0]                         # Number of GPUs to use / indices of GPUs like [0,1]
+  precision: 32                     # 32 / 16 / bf16 (bf16 falls back to fp16 on PL 1.4)
   max_epochs: 100                   # Number of epochs
+  accumulate_grad_batches: 1        # Gradient accumulation steps
+  num_workers: 0                    # DataLoader workers (overrides dataset.num_workers when set)
+  pin_memory: False                 # DataLoader pin_memory (set True for GPU)
+  persistent_workers: False         # DataLoader persistent_workers (num_workers>0)
+  prefetch_factor: 2                # DataLoader prefetch_factor (num_workers>0)
+  log_every_n_steps: null           # If null, auto-tuned to dataset size
+  gradient_clip_algorithm: norm     # norm / value
   logging: True                     # Logging to MlFlow
   mlflow_uri: http://127.0.0.1:5000 # MlFlow server is located on mtec-mis-gpu02.ethz.ch
   unscale_rmse: ???                 # RMSE with unnormalised targets; Will be defined with +dataset=...
@@ -24,10 +34,49 @@ exp:
   update_alpha: True                # Exponential growth of alpha from 0.0 to 1.0
   alpha_rate: exp                   # exp / lin
   balancing:                        # grad_reverse / domain_confusion
+                                    # set to none for no balancing
 
   bce_weight: False                 # Weight in BCE loss, proportional to treatment frequency
   weights_ema:                      # Exponential moving average of weights
   beta: 0.99                        # EMA beta
+
+  task: classification              # regression / classification
+  class_weights_mode: balanced      # none / balanced / manual
+  class_weights:                    # manual weights list (e.g. [w0,w1,w2])
+  label_smoothing: 0.0              # Cross-entropy label smoothing (classification)
+  use_focal_loss: False
+  focal_gamma: 2.0
+  classification_bce_coef: 0.0
+  domain_confusion_coef: 1.0
+  export_predictions: True
+  export_predictions_probs: True
+  export_predictions_logits: False
+  record_level_agg: mean_prob       # mean_prob / mean_logit / trimmed_mean_prob / majority_vote
+  record_level_trim: 0.1            # trimmed_mean_prob: trim fraction per tail
+  subject_level_agg: mean_prob      # mean_prob / majority_vote
+  log_predictions: False
+  log_predictions_n: 200
+  multi_task: False                 # Enable multi-task (outcome + shock localization)
+  lambda_shock: 0.3                 # Shock loss weight
+  outcome_loss_weight: 1.0          # Outcome loss weight (set 0.0 for shock-only)
+  early_stopping: True              # Only used for classification in train_multi.py
+  early_stopping_monitor: multi_val_f1_macro
+  early_stopping_mode: max
+  early_stopping_patience: 20
+  early_stopping_min_delta: 0.0
+  checkpoint_best: True             # Only used for classification in train_multi.py
+  checkpoint_monitor: multi_val_f1_macro
+  checkpoint_mode: max
+  checkpoint_save_top_k: 1
+  checkpoint_filename: best-{epoch:02d}-{multi_val_f1_macro:.4f}
+
+# Cross-validation overrides (optional; can be passed as CLI top-level)
+fold_index: null
+n_folds: null
+
+hydra:
+  job:
+    chdir: true                     # Change working directory to the config file location
 
 # Hydra defaults
 defaults:

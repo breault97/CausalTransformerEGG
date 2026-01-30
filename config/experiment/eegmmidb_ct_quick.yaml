@@ -1,0 +1,38 @@
+# @package _global_
+defaults:
+  - /dataset: eegmmidb
+  - /backbone: ct
+  - _self_
+
+exp:
+  task: classification
+  max_epochs: 1
+  logging: True
+  precision: 32
+  num_workers: 0
+  pin_memory: False
+  persistent_workers: False
+  prefetch_factor: null
+  export_predictions: False
+  export_predictions_probs: False
+  export_predictions_logits: False
+  log_predictions: False
+  early_stopping: False
+  checkpoint_best: False
+  balancing: none
+  domain_confusion_coef: 0
+  weights_ema: False
+  record_level_agg: mean_logit
+  record_level_trim: 0.1
+
+model:
+  multi:
+    batch_size: 16
+
+dataset:
+  val_batch_size: 64
+  bandpower_include_quality: True
+  normalization_mode: fold_zscore
+  normalization_scope: train
+  n_folds: 5
+  num_workers: 0

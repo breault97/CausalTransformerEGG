@@ -1,0 +1,311 @@
+{
+  "stage": "val",
+  "labels": [
+    "mauvais",
+    "moyen",
+    "excellent"
+  ],
+  "aggregations": {
+    "record": "mean_logit",
+    "subject": "mean_prob"
+  },
+  "levels": {
+    "window": {
+      "n_samples": 12600,
+      "metrics": {
+        "accuracy": 0.3446031746031746,
+        "balanced_acc": 0.33333333333333326,
+        "macro_f1": 0.1708574351708484
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            0,
+            6158,
+            0
+          ],
+          [
+            0,
+            4342,
+            0
+          ],
+          [
+            0,
+            2100,
+            0
+          ]
+        ],
+        "normalized": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "distribution": {
+        "y_true": {
+          "mauvais": 6158,
+          "moyen": 4342,
+          "excellent": 2100
+        },
+        "y_pred": {
+          "mauvais": 0,
+          "moyen": 12600,
+          "excellent": 0
+        }
+      },
+      "confidence": {
+        "mean_max_prob": 0.43049412965774536,
+        "brier": 0.6803948746094726,
+        "histogram": {
+          "bins": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            12600,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "accuracy": [
+            null,
+            null,
+            null,
+            null,
+            0.3446031746031746,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    "record": {
+      "n_samples": 210,
+      "metrics": {
+        "accuracy": 0.35714285714285715,
+        "balanced_acc": 0.33333333333332893,
+        "macro_f1": 0.17543859649109758
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            0,
+            111,
+            0
+          ],
+          [
+            0,
+            75,
+            0
+          ],
+          [
+            0,
+            24,
+            0
+          ]
+        ],
+        "normalized": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "distribution": {
+        "y_true": {
+          "mauvais": 111,
+          "moyen": 75,
+          "excellent": 24
+        },
+        "y_pred": {
+          "mauvais": 0,
+          "moyen": 210,
+          "excellent": 0
+        }
+      },
+      "confidence": {
+        "mean_max_prob": 0.43049415946006775,
+        "brier": 0.6779383687811232,
+        "histogram": {
+          "bins": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            210,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "accuracy": [
+            null,
+            null,
+            null,
+            null,
+            0.35714285714285715,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    },
+    "subject": {
+      "n_samples": 15,
+      "metrics": {
+        "accuracy": 0.3333333333333333,
+        "balanced_acc": 0.33333333333326665,
+        "macro_f1": 0.166666666666525
+      },
+      "confusion_matrix": {
+        "raw": [
+          [
+            0,
+            9,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "normalized": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      "distribution": {
+        "y_true": {
+          "mauvais": 9,
+          "moyen": 5,
+          "excellent": 1
+        },
+        "y_pred": {
+          "mauvais": 0,
+          "moyen": 15,
+          "excellent": 0
+        }
+      },
+      "confidence": {
+        "mean_max_prob": 0.4304942190647125,
+        "brier": 0.6865334200891245,
+        "histogram": {
+          "bins": [
+            0.0,
+            0.1,
+            0.2,
+            0.30000000000000004,
+            0.4,
+            0.5,
+            0.6000000000000001,
+            0.7000000000000001,
+            0.8,
+            0.9,
+            1.0
+          ],
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "accuracy": [
+            null,
+            null,
+            null,
+            null,
+            0.3333333333333333,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      }
+    }
+  }
+}

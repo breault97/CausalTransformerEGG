@@ -1,0 +1,7 @@
+# @package _global_
+# P4-SETUP: Cross-validation non stratifiée (GroupKFold)
+defaults:
+  - eegmmidb_ct_raw8_seed200
+
+dataset:
+  stratify_subject_split: false

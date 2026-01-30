@@ -1,0 +1,18 @@
+# @package _global_
+defaults:
+  - /dataset: eegmmidb
+  - _self_
+
+exp:
+  task: classification
+  logging: True
+  baseline_list: [eegnet, shallowconv, simple_cnn, csp_lda]
+  n_folds: 5
+  run_all_folds: false
+
+dataset:
+  bandpower_include_quality: True
+
+model:
+  max_epochs: 30
+

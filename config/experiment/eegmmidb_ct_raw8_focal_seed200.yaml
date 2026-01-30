@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - eegmmidb_ct_raw8_seed200
+  - _self_
+
+exp:
+  use_focal_loss: True
+  focal_gamma: 2.0

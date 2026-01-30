@@ -5,10 +5,16 @@ from torch import nn
 from omegaconf.errors import MissingMandatoryValue
 import torch.nn.functional as F
 from hydra.utils import instantiate
-from torch.utils.data import DataLoader, Dataset, Subset
+from torch.utils.data import DataLoader, Dataset, Subset, get_worker_info
 import logging
 import torch.optim as optim
+import os
+import sys
+import matplotlib
+if "matplotlib.pyplot" not in sys.modules:
+    matplotlib.use("Agg", force=True)
 import matplotlib.pyplot as plt
+plt.ioff()
 import numpy as np
 from typing import Union
 from functools import partial
@@ -192,6 +198,17 @@ class EDCT(BRCausalModel):
         return br
 
     def _visualize(self, fig_keys: list, dataset: Dataset, index=0, artifacts_path=None):
+        if get_worker_info() is not None:
+            logger.warning("Skipping attention visualization inside DataLoader worker.")
+            return
+        if self.trainer is not None and hasattr(self.trainer, "is_global_zero") and not self.trainer.is_global_zero:
+            logger.debug("Skipping attention visualization on non-zero rank.")
+            return
+        if artifacts_path is None:
+            artifacts_path = os.getcwd()
+            logger.warning(f"artifacts_path not provided; saving attention plots to {artifacts_path}.")
+        os.makedirs(artifacts_path, exist_ok=True)
+
         figs_axes = {k: plt.subplots(ncols=self.num_heads, nrows=self.num_layer, squeeze=False,
                                      figsize=(6 * self.num_heads, 5 * self.num_layer)) for k in fig_keys}
 
@@ -204,27 +221,27 @@ class EDCT(BRCausalModel):
                 ax[layer, j].title.set_text(f'Head {j} -- Layer {layer}')
 
         handles = []
-        for i, transformer_block in enumerate(self.transformer_blocks):
+        try:
+            for i, transformer_block in enumerate(self.transformer_blocks):
+                for k in fig_keys:
+                    att_layer = getattr(transformer_block, k).attention
+                    handles.append(att_layer.register_forward_hook(partial(plot_attn, layer=i, ax=figs_axes[k][1])))
+
+            # Forward pass
+            subset = Subset(dataset, [index])
+            subset.subset_name = dataset.subset_name
+            self.get_predictions(subset)
+
             for k in fig_keys:
-                att_layer = getattr(transformer_block, k).attention
-                handles.append(att_layer.register_forward_hook(partial(plot_attn, layer=i, ax=figs_axes[k][1])))
-
-        # Forward pass
-        subset = Subset(dataset, [index])
-        subset.subset_name = dataset.subset_name
-        self.get_predictions(subset)
-
-        for k in fig_keys:
-            figs_axes[k][0].suptitle(f'{k}: {dataset.subset_name} datasets, datapoint index: {index}', fontsize=14)
-
-        if artifacts_path is not None:
-            for k in fig_keys:
-                figs_axes[k][0].savefig(artifacts_path + f'/{self.model_type}_{k}_{index}.png')
-        else:
-            plt.show()
-
-        for handle in handles:
-            handle.remove()
+                fig, _ = figs_axes[k]
+                fig.suptitle(f'{k}: {dataset.subset_name} datasets, datapoint index: {index}', fontsize=14)
+                fig_path = os.path.join(artifacts_path, f"{self.model_type}_{k}_{index}.png")
+                fig.savefig(fig_path, dpi=200, bbox_inches="tight")
+        finally:
+            for handle in handles:
+                handle.remove()
+            for fig, _ in figs_axes.values():
+                plt.close(fig)
 
     def visualize(self, dataset: Dataset, index=0, artifacts_path=None):
         """

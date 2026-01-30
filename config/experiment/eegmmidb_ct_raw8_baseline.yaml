@@ -1,0 +1,58 @@
+# @package _global_
+defaults:
+  - /dataset: eegmmidb
+  - /backbone: ct
+  - _self_
+
+exp:
+  seed: 100
+  task: classification
+  logging: True
+  balancing: none
+  domain_confusion_coef: 0
+  weights_ema: False
+  precision: 32
+  num_workers: 0
+  pin_memory: False
+  persistent_workers: False
+  prefetch_factor: null
+  export_predictions: True
+  export_predictions_probs: True
+  export_predictions_logits: True
+  record_level_agg: mean_logit
+  record_level_trim: 0.1
+  class_weights_mode: balanced
+  label_smoothing: 0.05
+  early_stopping: True
+  early_stopping_monitor: multi_val_f1_macro_record
+  checkpoint_best: True
+  checkpoint_monitor: multi_val_f1_macro_record
+  checkpoint_filename: best-{epoch:02d}-{multi_val_f1_macro_record:.4f}
+
+model:
+  multi:
+    batch_size: 32
+    seq_hidden_units: 96
+    num_layer: 2
+    num_heads: 4
+    fc_hidden_units: 192
+    dropout_rate: 0.2
+    use_frontend: True
+    frontend_type: tcn
+    frontend_hidden: 128
+    frontend_layers: 4
+    frontend_dropout: 0.1
+    optimizer:
+      learning_rate: 3e-4
+      weight_decay: 1e-4
+      lr_scheduler:
+        type: cosine_warmup
+        warmup_pct: 0.05
+        t_max: ${exp.max_epochs}
+
+dataset:
+  feature_set: raw8
+  normalization_mode: fold_zscore
+  normalization_scope: train
+  n_folds: 5
+  num_workers: 0

@@ -1,0 +1,19 @@
+# Local-only ignore patterns (do NOT commit these to .gitignore if you want them repository-wide).
+#
+# Recommended usage:
+# - Copy/paste into .git/info/exclude (per-repo), or
+# - Add to your global gitignore (user-wide).
+
+# Cleanup staging area used in this repo:
+trash/
+
+# Optional local-only artifacts:
+outputs/
+data/
+mlruns/
+mlartifacts/
+mlflow_exports/
+.idea/
+.vscode/
+.DS_Store
+

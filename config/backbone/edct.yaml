@@ -20,6 +20,7 @@ model:
       learning_rate:
       weight_decay: 0.0
       lr_scheduler: False
+      lr_scheduler_params: {}
 
     tune_hparams: False
     tune_range: 50
@@ -50,6 +51,7 @@ model:
       learning_rate:
       weight_decay: 0.0
       lr_scheduler: False
+      lr_scheduler_params: {}
 
     tune_hparams: False
     tune_range: 30

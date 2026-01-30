@@ -7,6 +7,80 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def assert_disjoint_splits(train_ids, val_ids, test_ids, name: str,
+                           train_meta: dict = None, val_meta: dict = None, test_meta: dict = None):
+    """
+    Assert that identifiers are disjoint across train/val/test splits.
+    Raises RuntimeError with overlap details if leakage is detected.
+    Provides detailed logging of overlapping items.
+    """
+    def _to_set(ids):
+        if ids is None:
+            return set()
+        # Attempt to convert to int, but fall back to string if not possible
+        processed_ids = []
+        for x in ids:
+            try:
+                processed_ids.append(int(x))
+            except (ValueError, TypeError):
+                processed_ids.append(str(x))
+        return set(processed_ids)
+
+    train_set = _to_set(train_ids)
+    val_set = _to_set(val_ids)
+    test_set = _to_set(test_ids)
+
+    logger.info(f"Split check for '{name}': |train|={len(train_set)}, |val|={len(val_set)}, |test|={len(test_set)}")
+
+    tv = train_set & val_set
+    tt = train_set & test_set
+    vt = val_set & test_set
+
+    has_leakage = False
+    details = []
+
+    if tv:
+        has_leakage = True
+        details.append(f"train∩val={len(tv)}")
+        logger.error(f"Leakage: {len(tv)} '{name}' identifiers found in BOTH train and val sets.")
+        logger.error(f"Examples of train/val overlap: {list(tv)[:10]}")
+        if train_meta and val_meta:
+            logger.error("Associated records for train/val overlap:")
+            for item in list(tv)[:5]:
+                train_examples = train_meta.get(item, [])
+                val_examples = val_meta.get(item, [])
+                logger.error(f"  - {item}: train_records={train_examples}, val_records={val_examples}")
+
+    if tt:
+        has_leakage = True
+        details.append(f"train∩test={len(tt)}")
+        logger.error(f"Leakage: {len(tt)} '{name}' identifiers found in BOTH train and test sets.")
+        logger.error(f"Examples of train/test overlap: {list(tt)[:10]}")
+        if train_meta and test_meta:
+            logger.error("Associated records for train/test overlap:")
+            for item in list(tt)[:5]:
+                train_examples = train_meta.get(item, [])
+                test_examples = test_meta.get(item, [])
+                logger.error(f"  - {item}: train_records={train_examples}, test_records={test_examples}")
+
+    if vt:
+        has_leakage = True
+        details.append(f"val∩test={len(vt)}")
+        logger.error(f"Leakage: {len(vt)} '{name}' identifiers found in BOTH val and test sets.")
+        logger.error(f"Examples of val/test overlap: {list(vt)[:10]}")
+        if val_meta and test_meta:
+            logger.error("Associated records for val/test overlap:")
+            for item in list(vt)[:5]:
+                val_examples = val_meta.get(item, [])
+                test_examples = test_meta.get(item, [])
+                logger.error(f"  - {item}: val_records={val_examples}, test_records={test_examples}")
+
+    if has_leakage:
+        raise RuntimeError(f"Split leakage detected for {name}: " + ", ".join(details))
+    else:
+        logger.info(f"Split check for '{name}': OK, all sets are disjoint.")
+
+
 class SyntheticDatasetCollection:
     """
     Dataset collection (train_f, val_f, test_cf_one_step, test_cf_treatment_seq)

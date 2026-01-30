@@ -1,0 +1,69 @@
+# @package _global_
+dataset:
+  _target_: src.data.physionet_eegmmidb.PhysioNetEEGMMIDBDatasetCollection
+  name: eegmmidb
+  data_dir: ${oc.env:EEGMMIDB_DIR, ${hydra:runtime.cwd}/data/mne}
+  download: False
+  subjects: all
+  runs: all
+  window_seconds: 2.0
+  stride_seconds: 1.0
+  max_seq_length: 60
+  projection_horizon: 5
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  cache: True
+  cache_name: ""
+  split_by_subject: True
+  stratify_subject_split: True
+  n_folds: 5
+  fold_index: null
+  feature_set: bandpower
+  bandpower_bands:
+    - {name: delta, fmin: 0.5, fmax: 4.0}
+    - {name: theta, fmin: 4.0, fmax: 8.0}
+    - {name: alpha, fmin: 8.0, fmax: 12.0}
+    - {name: beta, fmin: 12.0, fmax: 30.0}
+    - {name: gamma, fmin: 30.0, fmax: 45.0}
+  bandpower_relative: True
+  bandpower_log: False
+  bandpower_include_quality: False
+  channel_grouping: channels   # channels / regions / custom
+  channel_groups: null
+  input_channels: null
+  input_samples: null
+  psd_nperseg: 256
+  psd_noverlap: 128
+  psd_fmin: 0.5
+  psd_fmax: 45.0
+  normalization_mode: fold_zscore
+  normalization_scope: train
+  treatment_mode: none
+  label_names: ["mauvais","moyen","excellent"]
+  label_strategy: quantile_fold
+  quantile_range: [0.33, 0.66]
+  label_feature: composite
+  fixed_thresholds: null
+  fit_split: train
+  label_balance_min: 0.1
+  label_balance_mode: warn
+  val_batch_size: 512
+  treatment_dim: 0
+  num_workers: 0
+
+model:
+  dim_treatments: 0
+  dim_vitals: 0
+  dim_static_features: 1
+  dim_outcomes: 3
+  dim_outcomes_input: 1
+
+exp:
+  unscale_rmse: False
+  percentage_rmse: False
+  precision: 16
+  num_workers: 0
+  pin_memory: True
+  persistent_workers: True
+  prefetch_factor: 2

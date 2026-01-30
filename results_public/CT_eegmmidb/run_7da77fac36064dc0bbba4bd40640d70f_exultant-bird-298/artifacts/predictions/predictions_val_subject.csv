@@ -1,0 +1,16 @@
+subject_id,y_true,y_pred,p0,p1,p2,y_true_label,y_pred_label,agg_used_subject
+9,0,0,0.9661431,0.019018438,0.014839181,mauvais,mauvais,mean_prob
+11,1,1,0.062666446,0.71015334,0.22718015,moyen,moyen,mean_prob
+15,1,1,0.323722,0.620296,0.055981882,moyen,moyen,mean_prob
+25,1,1,0.08986883,0.7252906,0.18484116,moyen,moyen,mean_prob
+35,0,0,0.96638995,0.017881885,0.015728202,mauvais,mauvais,mean_prob
+49,1,1,0.03891057,0.8194428,0.14164655,moyen,moyen,mean_prob
+53,2,2,0.015116359,0.36908525,0.61579883,excellent,excellent,mean_prob
+54,1,1,0.30836576,0.48049095,0.21114336,moyen,moyen,mean_prob
+67,0,0,0.9002386,0.08651328,0.013247213,mauvais,mauvais,mean_prob
+68,0,0,0.454637,0.42037964,0.12498383,mauvais,mauvais,mean_prob
+80,1,1,0.039832357,0.6726134,0.2875552,moyen,moyen,mean_prob
+88,1,1,0.25368896,0.52603257,0.22027817,moyen,moyen,mean_prob
+95,2,2,0.021463765,0.3873306,0.59120566,excellent,excellent,mean_prob
+99,1,1,0.252332,0.6177484,0.1299198,moyen,moyen,mean_prob
+104,0,0,0.9332598,0.043310124,0.023430308,mauvais,mauvais,mean_prob

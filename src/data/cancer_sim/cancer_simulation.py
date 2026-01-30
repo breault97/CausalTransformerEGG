@@ -15,7 +15,13 @@ Notes:
 import logging
 import numpy as np
 import pandas as pd
+import os
+import sys
+import matplotlib
+if "matplotlib.pyplot" not in sys.modules:
+    matplotlib.use("Agg", force=True)
 import matplotlib.pyplot as plt
+plt.ioff()
 import seaborn as sns
 from tqdm import tqdm
 from scipy.stats import truncnorm  # we need to sample from truncated normal distributions
@@ -794,18 +800,26 @@ def get_scaling_params(sim):
 # Plotting Functions
 
 
-def plot_treatments(data: dict, patient: int):
+def plot_treatments(data: dict, patient: int, output_path: str = None):
     df = pd.DataFrame({'N(t)': data['cancer_volume'][patient],
                        'C(t)': data['chemo_dosage'][patient],
                        'd(t)': data['radio_dosage'][patient],
                        })
     df = df[['N(t)', "C(t)", "d(t)"]]
-    df.plot(secondary_y=['C(t)', 'd(t)'])
-    plt.xlabel("$t$")
-    plt.show()
+    ax = df.plot(secondary_y=['C(t)', 'd(t)'])
+    ax.set_xlabel("$t$")
+    fig = ax.get_figure()
+    if output_path is None:
+        output_path = os.path.join(os.getcwd(), f"treatments_patient_{patient}.png")
+    os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+    try:
+        fig.tight_layout()
+        fig.savefig(output_path, dpi=200, bbox_inches="tight")
+    finally:
+        plt.close(fig)
 
 
-def plot_sigmoid_function(data: dict):
+def plot_sigmoid_function(data: dict, output_path: str = None):
     """
     Simple plots to visualise probabilities of treatment assignments
 
@@ -826,8 +840,16 @@ def plot_sigmoid_function(data: dict):
         data[coeff] = pd.Series(sigmoid_fxn(volumes, assigned_beta, assigned_interp), index=idx)
 
     df = pd.DataFrame(data)
-    df.plot()
-    plt.show()
+    ax = df.plot()
+    fig = ax.get_figure()
+    if output_path is None:
+        output_path = os.path.join(os.getcwd(), "sigmoid_treatment_probabilities.png")
+    os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+    try:
+        fig.tight_layout()
+        fig.savefig(output_path, dpi=200, bbox_inches="tight")
+    finally:
+        plt.close(fig)
 
 
 if __name__ == "__main__":

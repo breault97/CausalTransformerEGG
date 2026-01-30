@@ -4,6 +4,33 @@ import math
 import torch.nn.functional as F
 
 
+def _get_mask_fill_value(dtype: torch.dtype) -> float:
+    # Use a finite large negative value that is safe for the given dtype.
+    if dtype in (torch.float16, torch.bfloat16):
+        return -1e4
+    try:
+        return float(torch.finfo(dtype).min)
+    except Exception:
+        return -1e9
+
+
+def _assert_finite(tensor: torch.Tensor, name: str):
+    if not torch.isfinite(tensor).all():
+        raise RuntimeError(f"{name} contains NaN/Inf values. Check attention masking and dtype.")
+
+
+def _build_attn_mask(q_active: torch.Tensor, k_active: torch.Tensor) -> torch.Tensor:
+    """
+    Build a boolean attention mask for padding: mask both queries and keys.
+    q_active, k_active: (B, T, 1) or (B, T)
+    Returns: (B, 1, T_q, T_k)
+    """
+    q = q_active.squeeze(-1).bool()
+    k = k_active.squeeze(-1).bool()
+    mask = q.unsqueeze(-1) & k.unsqueeze(-2)
+    return mask.unsqueeze(1)
+
+
 def get_fixed_sin_cos_encodings(d_model, max_len):
     """
     Sin-cos fixed positional encodddings
@@ -104,15 +131,21 @@ class Attention(nn.Module):
 
         scores = scores / math.sqrt(query.size(-1))
 
+        neg_large = None
+        if mask is not None or one_direction:
+            neg_large = _get_mask_fill_value(scores.dtype)
+
         if mask is not None:
-            scores = scores.masked_fill(mask == 0, -1e9)
+            mask_bool = mask.to(dtype=torch.bool, device=scores.device)
+            scores = scores.masked_fill(~mask_bool, neg_large)
 
         if one_direction:  # Required for self-attention, but not for cross-attention
-            direction_mask = torch.ones_like(scores)
+            direction_mask = torch.ones_like(scores, dtype=torch.bool)
             direction_mask = torch.tril(direction_mask)
-            scores = scores.masked_fill(direction_mask == 0, -1e9)
+            scores = scores.masked_fill(~direction_mask, neg_large)
 
         p_attn = F.softmax(scores, dim=-1)
+        _assert_finite(p_attn, "attention softmax")
 
         if dropout is not None:
             p_attn = dropout(p_attn)
@@ -187,7 +220,7 @@ class TransformerEncoderBlock(nn.Module):
         self.feed_forward = PositionwiseFeedForward(d_model=hidden, d_ff=feed_forward_hidden, dropout=dropout)
 
     def forward(self, x, active_entries):
-        self_att_mask = active_entries.repeat(1, 1, active_entries.size(1)).unsqueeze(1)
+        self_att_mask = _build_attn_mask(active_entries, active_entries)
         x = self.self_attention(x, x, x, self_att_mask, True)
         x = self.feed_forward(x)
         return x
@@ -208,8 +241,8 @@ class TransformerDecoderBlock(nn.Module):
         self.feed_forward = PositionwiseFeedForward(d_model=hidden, d_ff=feed_forward_hidden, dropout=dropout)
 
     def forward(self, x, encoder_x, active_entries, active_encoder_br):
-        self_att_mask = active_entries.repeat(1, 1, active_entries.size(1)).unsqueeze(1)
-        cross_att_mask = (active_encoder_br.unsqueeze(1) * active_entries).unsqueeze(1)
+        self_att_mask = _build_attn_mask(active_entries, active_entries)
+        cross_att_mask = _build_attn_mask(active_entries, active_encoder_br)
 
         x = self.self_attention(x, x, x, self_att_mask, True)
         x = self.cross_attention(x, encoder_x, encoder_x, cross_att_mask, False)
@@ -228,10 +261,13 @@ class TransformerMultiInputBlock(nn.Module):
         self.self_attention_o = MultiHeadedAttention(num_heads=attn_heads, d_model=hidden, head_size=head_size,
                                                      dropout=attn_dropout, positional_encoding_k=self_positional_encoding_k,
                                                      positional_encoding_v=self_positional_encoding_v, final_layer=final_layer)
-        self.self_attention_t = MultiHeadedAttention(num_heads=attn_heads, d_model=hidden, head_size=head_size,
-                                                     dropout=attn_dropout, positional_encoding_k=self_positional_encoding_k,
-                                                     positional_encoding_v=self_positional_encoding_v, final_layer=final_layer)
-        if not disable_cross_attention:
+        if n_inputs >= 2:
+            self.self_attention_t = MultiHeadedAttention(num_heads=attn_heads, d_model=hidden, head_size=head_size,
+                                                         dropout=attn_dropout, positional_encoding_k=self_positional_encoding_k,
+                                                         positional_encoding_v=self_positional_encoding_v, final_layer=final_layer)
+        else:
+            self.self_attention_t = None
+        if n_inputs >= 2 and not disable_cross_attention:
             self.cross_attention_ot = MultiHeadedAttention(num_heads=attn_heads, d_model=hidden, head_size=head_size,
                                                            dropout=attn_dropout, positional_encoding_k=self_positional_encoding_k,
                                                            positional_encoding_v=self_positional_encoding_v,
@@ -240,6 +276,9 @@ class TransformerMultiInputBlock(nn.Module):
                                                            dropout=attn_dropout, positional_encoding_k=self_positional_encoding_k,
                                                            positional_encoding_v=self_positional_encoding_v,
                                                            final_layer=final_layer)
+        elif n_inputs >= 2:
+            self.cross_attention_ot = None
+            self.cross_attention_to = None
 
         if n_inputs == 3:
             self.self_attention_v = MultiHeadedAttention(num_heads=attn_heads, d_model=hidden, head_size=head_size,
@@ -276,13 +315,20 @@ class TransformerMultiInputBlock(nn.Module):
 
     def forward(self, x_tov, x_s, active_entries_treat_outcomes, active_entries_vitals=None):
         assert len(x_tov) == self.n_inputs
+        if self.n_inputs == 1:
+            (x_o,) = x_tov
+            self_att_mask = _build_attn_mask(active_entries_treat_outcomes, active_entries_treat_outcomes)
+            x_o_ = self.self_attention_o(x_o, x_o, x_o, self_att_mask, True)
+            out_o = self.feed_forwards[0](x_o_ + x_s)
+            return (out_o,)
         if self.n_inputs == 2:
             x_t, x_o = x_tov
         else:
             x_t, x_o, x_v = x_tov
 
-        self_att_mask_ot = active_entries_treat_outcomes.repeat(1, 1, x_t.size(1)).unsqueeze(1)
-        cross_att_mask_ot = cross_att_mask_to = self_att_mask_ot
+        self_att_mask_ot = _build_attn_mask(active_entries_treat_outcomes, active_entries_treat_outcomes)
+        cross_att_mask_ot = self_att_mask_ot
+        cross_att_mask_to = self_att_mask_ot
 
         x_t_ = self.self_attention_t(x_t, x_t, x_t, self_att_mask_ot, True)
         x_to_ = self.cross_attention_to(x_t_, x_o, x_o, cross_att_mask_ot, True) if not self.disable_cross_attention \
@@ -299,9 +345,9 @@ class TransformerMultiInputBlock(nn.Module):
             return out_t, out_o
 
         else:
-            self_att_mask_v = active_entries_vitals.repeat(1, 1, x_v.size(1)).unsqueeze(1)
-            cross_att_mask_ot_v = (active_entries_vitals.squeeze(-1).unsqueeze(1) * active_entries_treat_outcomes).unsqueeze(1)
-            cross_att_mask_v_ot = (active_entries_treat_outcomes.squeeze(-1).unsqueeze(1) * active_entries_vitals).unsqueeze(1)
+            self_att_mask_v = _build_attn_mask(active_entries_vitals, active_entries_vitals)
+            cross_att_mask_ot_v = _build_attn_mask(active_entries_treat_outcomes, active_entries_vitals)
+            cross_att_mask_v_ot = _build_attn_mask(active_entries_vitals, active_entries_treat_outcomes)
 
             x_tv_ = self.cross_attention_tv(x_t_, x_v, x_v, cross_att_mask_ot_v, True) if not self.disable_cross_attention \
                 and self.isolate_subnetwork != 't' and self.isolate_subnetwork != 'v' else 0.0
@@ -319,3 +365,34 @@ class TransformerMultiInputBlock(nn.Module):
             out_v = self.feed_forwards[2](x_vt_ + x_vo_ + x_s)
 
             return out_t, out_o, out_v
+
+
+def attention_mask_sanity_check(device: str = None) -> bool:
+    """
+    Minimal attention masking check that runs without dataset files.
+    Returns True if outputs are finite.
+    """
+    if device is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    dtype = torch.float16 if device == "cuda" else torch.float32
+    try:
+        q = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+        k = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+        v = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+    except Exception:
+        device = "cpu"
+        dtype = torch.float32
+        q = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+        k = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+        v = torch.randn(2, 2, 4, 8, device=device, dtype=dtype)
+
+    mask = torch.randint(0, 2, (2, 1, 4, 4), device=device, dtype=torch.int64)
+    attn = Attention()
+    with torch.no_grad():
+        out, attn_map = attn(q, k, v, mask=mask, dropout=None, one_direction=True)
+    _assert_finite(out, "attention output")
+    _assert_finite(attn_map, "attention map")
+    masked_vals = attn_map.masked_select(~mask.bool())
+    if masked_vals.numel() > 0 and not torch.all(masked_vals <= 1e-6):
+        raise RuntimeError("attention mask sanity check failed: masked positions have non-trivial attention.")
+    return True

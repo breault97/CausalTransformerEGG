@@ -8,17 +8,15 @@ from hydra.utils import instantiate
 from torch.utils.data import DataLoader, Dataset, Subset
 import logging
 import torch.optim as optim
-import matplotlib.pyplot as plt
 import numpy as np
 from typing import Union
 from functools import partial
-import seaborn as sns
-from sklearn.manifold import TSNE
 
 from src.models.edct import EDCT
 from src.models.utils_transformer import TransformerMultiInputBlock, LayerNorm
 from src.data import RealDatasetCollection, SyntheticDatasetCollection
 from src.models.utils import BRTreatmentOutcomeHead
+from src.models.eeg_frontend import build_eeg_frontend
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +53,7 @@ class CT(EDCT):
             self.projection_horizon = projection_horizon
 
         # Used in hparam tuning
-        self.input_size = max(self.dim_treatments, self.dim_static_features, self.dim_vitals, self.dim_outcome)
+        self.input_size = max(self.dim_treatments, self.dim_static_features, self.dim_vitals, self.dim_outcome_input)
         logger.info(f'Max input size of {self.model_type}: {self.input_size}')
         assert self.autoregressive  # prev_outcomes are obligatory
 
@@ -76,14 +74,35 @@ class CT(EDCT):
                     or self.dropout_rate is None:
                 raise MissingMandatoryValue()
 
-            self.treatments_input_transformation = nn.Linear(self.dim_treatments, self.seq_hidden_units)
+            self.has_treatments = int(self.dim_treatments) > 0
+            if self.has_treatments:
+                self.treatments_input_transformation = nn.Linear(self.dim_treatments, self.seq_hidden_units)
+            else:
+                self.treatments_input_transformation = None
             self.vitals_input_transformation = \
                 nn.Linear(self.dim_vitals, self.seq_hidden_units) if self.has_vitals else None
             self.vitals_input_transformation = nn.Linear(self.dim_vitals, self.seq_hidden_units) if self.has_vitals else None
-            self.outputs_input_transformation = nn.Linear(self.dim_outcome, self.seq_hidden_units)
+
+            self.use_frontend = bool(getattr(sub_args, "use_frontend", False))
+            self.frontend = None
+            frontend_out = self.dim_outcome_input
+            if self.use_frontend:
+                frontend_type = getattr(sub_args, "frontend_type", "conv")
+                frontend_hidden = int(getattr(sub_args, "frontend_hidden", self.dim_outcome_input))
+                frontend_layers = int(getattr(sub_args, "frontend_layers", 2))
+                frontend_dropout = float(getattr(sub_args, "frontend_dropout", self.dropout_rate))
+                self.frontend = build_eeg_frontend(frontend_type, self.dim_outcome_input,
+                                                   frontend_hidden, frontend_layers, frontend_dropout)
+                frontend_out = getattr(self.frontend, "out_dim", frontend_hidden)
+
+            #self.outputs_input_transformation = nn.Linear(self.dim_outcome, self.seq_hidden_units)
+            self.outputs_input_transformation = nn.Linear(frontend_out, self.seq_hidden_units)
             self.static_input_transformation = nn.Linear(self.dim_static_features, self.seq_hidden_units)
 
-            self.n_inputs = 3 if self.has_vitals else 2  # prev_outcomes and prev_treatments
+            if not self.has_treatments and self.has_vitals:
+                raise ValueError("CT: dim_treatments=0 with has_vitals=True is not supported.")
+            # Inputs are prev_outputs (+ prev_treatments if present) (+ vitals if present)
+            self.n_inputs = 1 + (1 if self.has_treatments else 0) + (1 if self.has_vitals else 0)
 
             self.transformer_blocks = nn.ModuleList(
                 [self.basic_block_cls(self.seq_hidden_units, self.num_heads, self.head_size, self.seq_hidden_units * 4,
@@ -98,6 +117,11 @@ class CT(EDCT):
             self.br_treatment_outcome_head = BRTreatmentOutcomeHead(self.seq_hidden_units, self.br_size,
                                                                     self.fc_hidden_units, self.dim_treatments, self.dim_outcome,
                                                                     self.alpha, self.update_alpha, self.balancing)
+
+            if self.multi_task:
+                # Multi-task heads: shock localization over time + record-level outcome
+                self.shock_head = nn.Linear(self.br_size, 1)
+                self.outcome_head = nn.Linear(self.br_size, self.dim_outcome)
 
             # self.last_layer_norm = LayerNorm(self.seq_hidden_units)
         except MissingMandatoryValue:
@@ -124,11 +148,11 @@ class CT(EDCT):
             for (k, v) in batch.items():
                 batch[k] = torch.cat((v, v), dim=0)
 
-        prev_treatments = batch['prev_treatments']
+        prev_treatments = batch.get('prev_treatments', None)
         vitals = batch['vitals'] if self.has_vitals else None
         prev_outputs = batch['prev_outputs']
         static_features = batch['static_features']
-        curr_treatments = batch['current_treatments']
+        curr_treatments = batch.get('current_treatments', None)
         active_entries = batch['active_entries']
 
         br = self.build_br(prev_treatments, vitals, prev_outputs, static_features, active_entries, fixed_split)
@@ -149,7 +173,9 @@ class CT(EDCT):
                 active_entries_vitals[i, int(fixed_split[i]):, :] = 0.0
                 vitals[i, int(fixed_split[i]):] = 0.0
 
-        x_t = self.treatments_input_transformation(prev_treatments)
+        x_t = self.treatments_input_transformation(prev_treatments) if self.has_treatments else None
+        if self.frontend is not None:
+            prev_outputs = self.frontend(prev_outputs)
         x_o = self.outputs_input_transformation(prev_outputs)
         x_v = self.vitals_input_transformation(vitals) if self.has_vitals else None
         x_s = self.static_input_transformation(static_features.unsqueeze(1))  # .expand(-1, x_t.size(1), -1)
@@ -158,17 +184,23 @@ class CT(EDCT):
         for block in self.transformer_blocks:
 
             if self.self_positional_encoding is not None:
-                x_t = x_t + self.self_positional_encoding(x_t)
+                if self.has_treatments:
+                    x_t = x_t + self.self_positional_encoding(x_t)
                 x_o = x_o + self.self_positional_encoding(x_o)
                 x_v = x_v + self.self_positional_encoding(x_v) if self.has_vitals else None
 
             if self.has_vitals:
                 x_t, x_o, x_v = block((x_t, x_o, x_v), x_s, active_entries_treat_outcomes, active_entries_vitals)
-            else:
+            elif self.has_treatments:
                 x_t, x_o = block((x_t, x_o), x_s, active_entries_treat_outcomes)
+            else:
+                (x_o,) = block((x_o,), x_s, active_entries_treat_outcomes)
 
         if not self.has_vitals:
-            x = (x_o + x_t) / 2
+            if self.has_treatments:
+                x = (x_o + x_t) / 2
+            else:
+                x = x_o
         else:
             if fixed_split is not None:  # Test seq data
                 x = torch.empty_like(x_o)

@@ -1,0 +1,12 @@
+# @package _global_
+# P4-SETUP: Combine non-stratified CV and manual class weights
+defaults:
+  - eegmmidb_ct_raw8_seed200
+
+exp:
+  class_weights_mode: manual
+  class_weights: [1.0, 1.5, 1.0]
+  use_focal_loss: false
+
+dataset:
+  stratify_subject_split: false

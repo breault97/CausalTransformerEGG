@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - /dataset: eegmmidb
+  - _self_
+
+exp:
+  task: classification
+  logging: False
+  ablate_channels: []

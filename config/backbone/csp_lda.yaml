@@ -1,0 +1,7 @@
+# @package _global_
+model:
+  name: CSP_LDA
+  baseline:
+    _target_: src.models.baselines.CSP_LDA
+    n_components: 6
+    reg: null
